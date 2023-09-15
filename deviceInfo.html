@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./st.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="Homepage.html">Organization Name</a></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Location.html">Locate Hub</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Our services.html">Our Services</a></li>
+                </ul>
+            </div>
+            <div class="cta-buttons">
+                <a href="Lgoin.html" class="login-button">Login</a>
+                <a href="#" class="sell-button">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="max-width: 90%; width: 90%;">
+        <div class="row">
+            <div class="col-4">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>--Type of Device--</option>
+                    <option value="1">Mobile</option>
+                    <option value="2">Laptop</option>
+                    <option value="3">Television</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>--Brand--</option>
+                    <option value="1">Apple</option>
+                    <option value="2">Samsung</option>
+                    <option value="3">Redmi</option>
+                    <option value="3">Oppo</option>
+                    <option value="3">Vivo</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>--Model Number--</option>
+                    <option value="1">1Tuvw110</option>
+                    <option value="2">1Tuvw111</option>
+                    <option value="3">1Tuvw112</option>
+                </select>
+            </div>
+
+            
+        </div>
+        <button type="button" class="btn btn-primary phone" style="margin: 10px 45% 10px 50%;">Find</button>
+    </div>
+
+    <div class="container" style="border: solid 1px black; max-width: 90%; width: 90%;">
+
+        <h4 style="text-align: center;">Available Device</h4>
+        <div class="group-2 filterable">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <p class="card-text">Your Cool Comfort Solution</p>
+                    <a href="AC.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-1 filterable align-content-lg-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Phone</h5>
+                    <p class="card-text">Your Cool Comfort Solution</p>
+                    <a href="Alternator.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-2 filterable align-content-lg-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Air Conditnor</h5>
+                    <p class="card-text">Your Cool Comfort Solution</p>
+                    <a href="Aluminium.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-2 filterable align-content-lg-center">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Television</h5>
+                    <p class="card-text">Your Cool Comfort Solution</p>
+                    <a href="Aluminium.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+$(document).ready(function(){
+    var activeCat = "";    
+  function filterGroup(group){
+    if(activeCat != group){
+    //   $("div").filter("."+group).show();
+    //   $("div").filter(":not(."+group+")").hide();
+    $(".filterable").hide(); // Hide all filterable elements
+                $("." + group).show();
+      activeCat = group;
+    }
+  }
+  
+//   $(".cat-all").click(function(){
+//     $("div").show();
+//     activeCat = "all";
+//   });
+  $(".phone").click(function(){ filterGroup("group-1"); });
+//   $(".cat-2").click(function(){ filterGroup("group-2"); });
+//   $(".cat-3").click(function(){ filterGroup("group-3"); });
+});
+    </script>
+
+</body>
+
+</html>

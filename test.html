@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-fluid lot-details-description">
+        <!----><div ng-if="showRegularView">
+          <!----><div ng-if="!isDRIVELot">
+    <div class="">
+      <div class="col-lg-9 col-md-8 col-xs-12 image-location p-0-i">
+        <div class="images-lot-info-container">
+          <div class="lot-images-section p-0">
+            <div class="image-galleria_wrap" sp-image-viewer="">
+      <!-- image galleria -->
+      <div class="spZoomViewer">
+          <div class="pos-relative">
+              <a aria-label="Previous Image" class="previous-nav-arrows" href="" ng-click="goToPrevImg()">
+                  <img src="/images/icons/lot-details-icons-new.svg" class="img-responsive prevArrow" alt="Previous Image Nav" id="prevArrow" style="display: none;">
+                  <!--<img src="/images/icons/icon_Left.svg" class="nimg-responsive hd-imageav-arrows slider-left white" id="prevArrow" style="display: none;"/>-->
+              </a>
+              <a class="next-nav-arrows" href="" ng-click="goToNextImg()">
+                  <img src="/images/icons/lot-details-icons-new.svg" class="img-responsive nextArrow right-0" alt="Next Image Nav" id="nextArrow">
+              </a>
+              <div class="spZoomImg pos-relative" sp-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_ful.jpg" style="position: relative;">
+  
+                  <span class="click-to-zoom">
+                      <i class="fa fa-search-plus" aria-hidden="true"></i>Click Image to Zoom
+                  </span>
+  
+                  <img id="show-img" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_hrs.jpg" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" class="img-responsive w100" error-image="/images/testImages/lot_NoPhoto.png" ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_ful.jpg" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_ful.jpg">
+                  <canvas id="sp-canvas" style="vertical-align: bottom; display: none;"></canvas>
+              <span class="zoomSection" style="display: none; position: absolute; left: 0px; top: 74.0833px; background-color: rgb(0, 0, 0); width: 300px; height: 300px; opacity: 0.2; border: 1px solid rgb(204, 204, 204); cursor: zoom-out;"></span><div class="showPanel" style="display: none; position: absolute; overflow: hidden; left: 516px; top: 0px; width: 511px; height: 383px;"><img src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_ful.jpg" id="big-img" style="position: absolute; left: 0px; top: -94.5797px; width: 870.403px; height: 488.963px;"></div></div>
+          </div>
+  
+          <!----><div class="view-all-pic" ng-if="!isDRIVELot"><!--Hiding information if it is DRIVE Lot-->
+              <span class="view-all-photos">
+                  <a class="viewalltxt" ng-href="/lot/64226573/Photos/clean-title-2022-bmw-x3-xdrive30i-fl-miami-central" ng-click="showAllPhotosView($event)" href="/lot/64226573/Photos/clean-title-2022-bmw-x3-xdrive30i-fl-miami-central">
+                      VIEW ALL
+                  </a>
+              </span>
+  
+              <span class="view-hd">
+                  <a ng-click="showHDImg($event)">
+                      <img class="img-responsive hd-image" src="../images/lot-details/icon-hd.svg" alt="HD images">
+                  </a>
+              </span>
+  
+              <!-- Commented 360 view : bcoz 360 images are not coming from solr-->
+              <!---->
+  
+              <span pref-code="lotDetailsPreference.allowDownloadImages" access-value="true" class="download-image">
+                  <a pref-code="lotDetailsPreference.allowDownloadImages" access-value="true" ng-href="./public/data/lotImages/download/64226573" ng-click="downloadImages($event)" target="_self" href="./public/data/lotImages/download/64226573">
+                      <img class="img-responsive dwnload-image" src="../images/icons/download.svg" alt="Download">
+                  </a>
+              </span>
+              
+          </div><!---->
+  
+          <div class="pos-relative">
+              <span ng-class="'watermark-img brand-water-mark '+ lotDetails.brand +'-watermark'" class="watermark-img brand-water-mark COPART-watermark"></span>
+          </div>
+  
+          <div class="small-container martop">
+              <div id="small-img-roll" class="d-flex thumbImgContainer thumb-scroll" ng-class="(thumbNailImages.length>10) ? 'thumb-scroll':''">
+                  <!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_thb.jpg" class="img-responsive cursor-pointer thumbnailImg active" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_hrs.jpg" target-index="0" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/304b1b7ad80244bc91266896f1dd9b95_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/5e7fe47ecc50460e8ca6392a14f44aa5_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/5e7fe47ecc50460e8ca6392a14f44aa5_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/5e7fe47ecc50460e8ca6392a14f44aa5_hrs.jpg" target-index="1" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/5e7fe47ecc50460e8ca6392a14f44aa5_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/1c1f90b15e4b466dadde626d9df7988b_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/1c1f90b15e4b466dadde626d9df7988b_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/1c1f90b15e4b466dadde626d9df7988b_hrs.jpg" target-index="2" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/1c1f90b15e4b466dadde626d9df7988b_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/ac27d39ed08740afb52af76e5a574dfb_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/ac27d39ed08740afb52af76e5a574dfb_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/ac27d39ed08740afb52af76e5a574dfb_hrs.jpg" target-index="3" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/ac27d39ed08740afb52af76e5a574dfb_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/6239522e657047df8bd53472725adea6_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/6239522e657047df8bd53472725adea6_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/6239522e657047df8bd53472725adea6_hrs.jpg" target-index="4" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/6239522e657047df8bd53472725adea6_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/9533040c58c8401f8174a8f695f63704_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/9533040c58c8401f8174a8f695f63704_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/9533040c58c8401f8174a8f695f63704_hrs.jpg" target-index="5" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/9533040c58c8401f8174a8f695f63704_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/831eaa025e4840ea96aeaa07dbaea596_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/831eaa025e4840ea96aeaa07dbaea596_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/831eaa025e4840ea96aeaa07dbaea596_hrs.jpg" target-index="6" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/831eaa025e4840ea96aeaa07dbaea596_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/3a6e6b63f80e4beab9a926cfe7ebde5b_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/3a6e6b63f80e4beab9a926cfe7ebde5b_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/3a6e6b63f80e4beab9a926cfe7ebde5b_hrs.jpg" target-index="7" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/3a6e6b63f80e4beab9a926cfe7ebde5b_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/44b111e1a7184be6aa738383b1b90149_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/44b111e1a7184be6aa738383b1b90149_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/44b111e1a7184be6aa738383b1b90149_hrs.jpg" target-index="8" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/44b111e1a7184be6aa738383b1b90149_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/fa9bc56c6bcc4581a6a62758d294eae1_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/fa9bc56c6bcc4581a6a62758d294eae1_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/fa9bc56c6bcc4581a6a62758d294eae1_hrs.jpg" target-index="9" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/fa9bc56c6bcc4581a6a62758d294eae1_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/713e784472ad4cbeb9e480fa3deb1049_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/713e784472ad4cbeb9e480fa3deb1049_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/713e784472ad4cbeb9e480fa3deb1049_hrs.jpg" target-index="10" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/713e784472ad4cbeb9e480fa3deb1049_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/0586385ce1de4312b9a3415582e09d1b_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/0586385ce1de4312b9a3415582e09d1b_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/0586385ce1de4312b9a3415582e09d1b_hrs.jpg" target-index="11" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/0586385ce1de4312b9a3415582e09d1b_thb.jpg">
+                  </span><!----><span ng-repeat="image in thumbNailImages" class="thumbImgblock" on-finish-render="ngRepeatFinished">
+                  <img ng-src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/7c3585c607a347ada032285cf7f4c0d2_thb.jpg" class="img-responsive cursor-pointer thumbnailImg" error-image="" title="2022 BMW X3 XDRIVE30I" alt="2022 BMW X3 XDRIVE30I for Sale at Copart FL - MIAMI CENTRAL" full-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/7c3585c607a347ada032285cf7f4c0d2_ful.jpg" hd-url="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/7c3585c607a347ada032285cf7f4c0d2_hrs.jpg" target-index="12" ng-click="showImg($index,false)" src="https://cs.copart.com/v1/AUTH_svc.pdoc00001/lpp/0823/7c3585c607a347ada032285cf7f4c0d2_thb.jpg">
+                  </span><!---->
+              </div>
+          </div>
+      </div>
+  
+      <div id="engineSoundModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content overflowHidden">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×
+                      </button>
+                      <h4 class="modal-title">Play Engine Sound</h4>
+                  </div>
+                  <div class="modal-body">
+                      <!---->
+                  </div>
+                  <div class="modal-footer martop ">
+                      <button type="button" class="btn btn-dgray btn-onlight" data-dismiss="modal">Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  </div>
+            <div class="location-delivery p-0 desktop-only mt-5 f-g1 d-flex-column">
+              
+      
+          
+          
+          
+          
+          <!----><div class="panel m-0 clearfix" id="shipping-estimate" ng-if="(showLocationDeliveryWidget != undefined &amp;&amp; showLocationDeliveryWidget) &amp;&amp; (showDelivery) &amp;&amp; (lotDetails.lstg!=99)">
+    <div class="panel-heading location-delivery-header">
+      <!----><h3 class="d-inline-block" data-uname="lotdetailLocationanddeliverylabel" ng-if="(!(showQuoteInDelivery &amp;&amp; currentLotShippingData &amp;&amp; currentLotShippingData.length>0)) &amp;&amp; !orderDeliveryForUK">
+        Shipping Estimate
+        <hr class="s-h-separator">
+      </h3><!---->
+      <!---->
+      <!----><a ng-if="siteRegionCode == 'us' &amp;&amp; !(showQuoteInDelivery &amp;&amp; currentLotShippingData &amp;&amp; currentLotShippingData.length>0)" href="javascript:void(0)" ng-click="viewMaps()" class="location-info bl-link" data-uname="lotdetailLocationanddeliveryviewmaplink">
+        View Map
+        <i class="fa fa-angle-right"></i>
+      </a><!---->
+      <!-- end of location & delivery header -->
+    </div>
+  
+    <!----><div ng-if="!(showQuoteInDelivery &amp;&amp; currentLotShippingData &amp;&amp; currentLotShippingData.length>0)">
+      <div class="form-group shipping-type mb-0 clearfix ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="typeOfDelivery" ng-show="displayIntlShipping">
+        <div class="col-sm-12 p-0">
+          <label class="select-shipping-type">Select Shipping Type:</label>
+          <div class="shipping-options-container">
+            <label class="form-check-label selected" for="domestic-shipping-radio" ng-class="{ 'selected': typeOfDelivery === 'domestic' }">
+              <input type="radio" id="domestic-shipping-radio" ng-model="typeOfDelivery" value="domestic" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="243">
+              <i class="lotdetails-icons-redesign dome-ship-icon"></i>
+              Domestic
+            </label>
+  
+            <label class="form-check-label" for="international-shipping-radio" ng-class="{ 'selected': typeOfDelivery === 'international' }">
+              <input type="radio" id="international-shipping-radio" ng-model="typeOfDelivery" value="international" class="ng-pristine ng-untouched ng-valid ng-not-empty" name="244">
+              <i class="lotdetails-icons-redesign inter-ship-icon"></i>
+              International
+            </label>
+          </div>
+        </div>
+      </div>
+      <!----><div ng-if="typeOfDelivery == 'domestic'">
+        <!---->
+  
+        <!----><div class="clearfix lazy_load_container" ng-if="showEstimateInDelivery">
+          <!-- Show estimate in prelim bidding -->
+          <span request-type="ESTIMATES" lot-id="64226573" module="lotDetails" estimates="estimates" yard-number="105" change-address="true" transportaion-estimates="null">
+  <!----><div ng-if="::module == 'lotDetails'">
+      <!--  For Lot Details  -->
+      <!---->
+  
+      <!---->
+  
+      <!----><div ng-if="navigateToDeliveryRoutes &amp;&amp; enableEstimates" class="normal-estimate">
+          <div class="clearfix panel-content delivery-estimate">
+              <label class="control-label bold pt-5" for="deliverTo" data-uname="lotdetailLocationanddeliverydeliverto">
+                  Delivery to:
+              </label>
+              <form name="estimatesForm" class="float-left full-width ng-pristine ng-invalid ng-invalid-required ng-valid-pattern">
+                  <input data-uname="lotdetailLocationanddeliverydeliverytextbox" class="input-md form-control deliverTo ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" type="text" ng-model="estimates.newZipCode" required="required" name="zip" placeholder="Enter US Zip code" ng-pattern="/^(?=.{1,10}$)([a-z0-9-\s]+)$/i">
+                  <span class="ml-10 float-none check-estimate-btn" ng-click="setSelectedRow(lotId)">
+                          <button type="submit" class="btn btn-copart-blue white-blue-btn white-blue-btn" role="button" aria-label="Check Estimate" ng-click="estimates.updateDeliveryEstimate(true,estimatesForm.$valid, estimates.newZipCode);" data-uname="lotdetailLocationanddeliverycalculatebutton">
+                                  Check Estimate
+                          </button>
+                      </span>
+  
+                  <div class="error" ng-show="!estimatesForm.zip.$pristine || !estimatesForm.zipUK.$pristine">
+                      <p class="font-red ng-hide" ng-show="(estimatesForm.zip.$error.required || estimatesForm.zip.$error.pattern) &amp;&amp; !estimatesForm.zip.$pristine">
+                          Zip is Invalid
+                      </p>
+                      <p class="float-left clr mb-10 error clr font-red ng-hide" ng-show="((estimatesForm.zipUK.$error.required || estimatesForm.zipUK.$error.minlength) &amp;&amp; estimates.isQuoteCalcBtnClicked)">
+                          Please enter a full UK postcode to obtain a delivery quote.
+                      </p>
+                      <!-- changed to ng-if instead of ng-show to check for null arguments in function call -->
+                  </div>
+              </form>
+  
+              <!---->
+              <!-- <span ng-show="errorUkDelivery" class="error clr font-red">{{::locale.messages["app.error.ukDelivery"]}}</span> -->
+              <!---->
+              <div class="text-muted float-left clr mb-10">
+                  <p ng-show="estimates.errorUkDelivery" class="float-left clr mb-10 error clr font-red ng-hide">Unfortunately we are unable to process your request, please contact the Operation Centre for more information.</p>
+                  <p class="float-left clr mb-10 error clr font-red ng-hide" ng-show="estimates.showErrorMsgForOrderedLot"></p>
+                  <p class="float-left clr mb-10 error clr font-red ng-hide" ng-show="estimates.towZoneErrorMessage">Unfortunately, this Operations Centre is unable to provide a delivery service to the postcode entered. Please provide an alternative address.</p>
+                  <p class="float-left clr mb-10 error clr font-red ng-hide" ng-show="estimates.markupPriceErrorMessage">Please contact the Operating Centre for a Delivery Price.</p>
+              </div>
+              <!----><div class="text-muted float-left clr mb-10 w100" data-uname="lotdetailLocationanddeliveryshippinginfo" ng-if="!orderDeliveryForUK">
+                  For international inquiries, contact
+                  <a class="export-contact-details bl-link" href="mailto:export@copart.com" target="_top">export@copart.com</a>
+              </div><!---->
+  
+              <!---->
+  
+              <!---->
+          </div>
+  
+          <!---->
+      </div><!---->
+  
+      <!---->
+  
+      <!----><div ng-if="(navigateToDeliveryRoutes &amp;&amp; enableEstimates) || (requestType =='ESTIMATES' &amp;&amp; !navigateToDeliveryRoutes)">
+          <div class="bggray fs14 pull-right w100 mb-10 panel-link-bottom" pref-code="lotDetailsPreference.showIntShip" access-value="true">
+              <a target="_blank" class="bl-link" href="./international-shipping">International Shipping Information
+                  <i class="fa fa-angle-right iconspacing bold" aria-hidden="true"></i>
+              </a>
+          </div>
+      </div><!---->
+  
+      <!-- END --LOT DETAILS -->
+  </div><!---->
+  
+  <!---->
+  </span>
+        </div><!---->
+      </div><!---->
+  
+      <!---->
+    </div><!---->
+  </div><!---->
+      
+  
+            </div>
+            <div>
+      <div id="orderDelivery" class="modal fade" role="dialog">
+          <div class="modal-dialog body-container">
+              <div class="modal-content col-sm-12" style="max-width:600px;">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <!---->
+                      <!----><h4 class="modal-title" ng-if="!orderDeliveryForUK">Order Delivery</h4><!---->
+                  </div>
+                  <div class="modal-body">
+                      <div class="col-sm-12 p-0 shipping-type">
+                      
+                      <div class="domestic-shipping">
+                          <label class="row col-sm-12">Lot#   will be delivered to</label>
+  
+                          <form name="addLocationForm" novalidate="" ng-submit="updateQuote(addLocationForm.$valid)" class="ng-pristine ng-valid">
+                          <input type="hidden" ng-model="estimates.modifyAddress" name="modifyAddress" class="ng-pristine ng-untouched ng-valid ng-empty">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                    <!---->
+                                    <div class="radio">
+                                          <label for="radioOther">
+                                              <input id="radioOther" type="radio" name="radios" ng-model="estimates.selectedLocation.type" value="other" ng-click="estimates.updateAddressEstimate(estimates.selectedLocation.type)" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                              Add new delivery location
+                                          </label>
+                                      </div>
+                                </div>
+                               </div>
+                              <!---->
+                               <div class="form-group-all formbox modalboxdesign">
+                                  <div ng-show="!estimates.showAddDeliveryLocation" class="form-group row  textfield">
+                                      <!----><label class="col-md-5 col-sm-5  col-xs-12  text-right" for="Type" ng-if="!orderDeliveryForUK">Estimated Delivery Cost</label><!---->
+                                      <!---->
+                                          <div class="col-md-7 col-sm-7 col-xs-12">
+                                              
+                                          </div>
+                                  </div>
+                                  <div>
+                                    <!---->
+                              </div>
+                              </div>
+                              <div class="float-left clr mb-10 error clr font-red ng-hide" ng-show="orderDeliveryForUK &amp;&amp; estimates.isCatBLot"></div>
+                              <div class="text-muted float-left clr mb-10">
+                                  <span class="float-left clr mb-10 error clr font-red ng-hide" ng-show="estimates.towZoneErrorMessage">Unfortunately, this Operations Centre is unable to provide a delivery service to the postcode entered. Please provide an alternative address.</span>
+                              </div>
+                          </form>
+               
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-white" data-dismiss="modal" ng-click="estimates.reloadParentPage()">
+                                  Cancel
+                              </button>
+                              <!---->
+                              <!---->
+                              <!----><button class="btn btn-copart-blue" ng-click="estimates.submitOrder(true,selectedLotNumber,selectedYardName)" ng-if="(!estimates.showAddDeliveryLocation || estimates.newLocationEstimates) &amp;&amp; !orderDeliveryForUK " ng-disabled="estimates.disableOrderButton">Submit
+                                  Address
+                              </button><!---->
+                              <!---->
+                          </div>
+                      </div>
+                      </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div id="shippingSuccessm" class="modal ng-hide" role="dialog" ng-show="estimates &amp;&amp; estimates.currentShipData" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog">
+              <div class="modal-content overflowHidden">
+                  <div class="modal-header pb-0">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                      <!---->
+  
+                      <!---->
+                  </div>
+  
+                  <div class="modal-body wordWrap tracking-section py-0 mt-15">
+  
+                      <p class="col-sm-12 pt-0 px-0" bind-html-compile="locale.messages[estimates.vendorContactInfoData]">
+                      </p>
+  
+                      <div class="clr row m-0 provider-information">
+                          <span class="col-sm-12 my-10 p-0">
+                              <span class="text-center left">
+                                  <img class="img-responsive provider-logo" alt="Provider logo">
+                              </span>
+                              <span class="col-sm-10">
+                                  <strong></strong>
+                                  <p>	From:
+                                      <strong></strong> in
+                                      <strong></strong>
+                                  </p>
+                                  <p>	Shipping To:
+                                      <strong></strong> in
+                                      <strong></strong>
+                                  </p>
+                              </span>
+                          </span>
+                      </div>
+  
+                      <div class="row m-0 pt-5 tracking-number">
+                          <div class="col-sm-12 p-0">
+                              <strong>Order Status: </strong>
+                              <strong class="" ng-bind-html="estimates.currentShipData.trackingStatus ? locale.messages['app.label.orderStatus.'+estimates.currentShipData.trackingStatus] : locale.messages['app.label.orderStatus.UNKNOWN']">Status Unavailable</strong>
+                          </div>
+                      </div>
+  
+                      <div class="row m-0 pt-5 tracking-number">
+                          <div class="col-sm-12 p-0">
+                              <strong>Tracking: </strong>
+                              <a href="">
+                                  
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-copart-blue" data-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+          <!-- redirectError Model -->
+      
+      <div id="redirectShippingModel" class="modal ng-hide" ng-show="estimates &amp;&amp; estimates.redirectIntlShipOrderData">
+          <div class="modal-dialog">
+              <div class="modal-content overflowHidden">
+                  <div class="modal-header pb-0">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                      <!---->
+  
+                      <!---->
+                  </div>
+  
+                  <div class="modal-body wordWrap tracking-section py-0 mt-15">
+  
+                      <p class="col-sm-12 pt-0 px-0" bind-html-compile="locale.messages[estimates.vendorContactData]">
+                      </p>
+  
+                      <div class="clr row m-0 provider-information">
+                          <span class="col-sm-12 my-10 p-0">
+                              <span class="text-center left">
+                                  <img class="img-responsive provider-logo" alt="Provider logo">
+                              </span>
+                              <span class="col-sm-10">
+                                  <strong></strong>
+                                  <p>	From:
+                                      <strong></strong> in
+                                      <strong></strong>
+                                  </p>
+                                  <!-- <p>	{{locale.messages["app.label.shippingTo"]}}
+                                      <strong>{{currentShippingOrder.destinationPortName}}</strong> in
+                                      <strong>{{currentShippingOrder.destinationCountryName}}</strong>
+                                  </p> -->
+                              </span>
+                          </span>
+                      </div>
+  
+                      <div class="row m-0 pt-5 tracking-number">
+                          <div class="col-sm-12 p-0">
+                              <strong>Order Status: </strong>
+                              <strong class="" ng-bind-html="estimates.redirectIntlShipOrderData.trackingStatus ? locale.messages['app.label.orderStatus.'+estimates.redirectIntlShipOrderData.trackingStatus] : locale.messages['app.label.orderStatus.UNKNOWN']">Status Unavailable</strong>
+                          </div>
+                      </div>
+  
+                      <div class="row m-0 pt-5 tracking-number">
+                          <div class="col-sm-12 p-0">
+                              <strong>Tracking: </strong>
+                              <a href="">
+                                  
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-copart-blue" data-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div id="cancelDelivery" class="modal fade" role="dialog">
+          <div class="modal-dialog body-container">
+              <div class="modal-content overflowHidden">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <h4 class="modal-title">Cancel Delivery</h4>
+                  </div>
+                   <span class="lightred bold col-sm-12 ng-hide" ng-show="estimates.showErrorMessage">
+                      
+                  </span>
+                  <div class="modal-body">
+                      This will cancel your delivery order for Lot# 64226573 . If you want to continue the cancellation click Cancel Delivery below. Otherwise choose Go Back.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal" ng-click="estimates.reloadParentPage()">Go Back</button>
+                    <button class="btn btn-copart-blue" ng-click="estimates.cancelOrder(selectedLotNumber,selectedYardName)">Cancel Delivery</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+       <!-- Change Zip Modal -->
+  
+      <!----><div id="payZipcode" class="modal fade" tabindex="-1" role="dialog" ng-if="!orderDeliveryForUK">
+          <div class="modal-dialog">
+              <div class="modal-content col-sm-12" style="max-width:600px;">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <h4 class="modal-title">Enter Zip Code</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>Enter your Zip Code below to quote delivery based on your location.</p>
+                      <div class="form-group-all formbox modalboxdesign">
+                          <div class="form-group">
+                              <label class="col-md-5 col-sm-5  col-xs-12  text-right" for="Type">Zip Code</label>
+                              <div class="col-md-7 col-sm-7 col-xs-12">
+                                  <form name="quotesForm" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+                                      <input class="input-md  form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" type="text" ng-model="estimates.newZipCode" ng-pattern="/^[a-zA-Z0-9]*$/" ng-minlength="3" maxlength="5" name="zip" required="required">
+  
+                                  </form>
+  
+                                  <!---->
+  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-white" data-dismiss="modal" ng-click="estimates.reloadParentPage()">Cancel</button>
+                  <button type="submit" class="btn btn-copart-blue" ng-click="estimates.updateDeliveryEstimate(false,quotesForm.$valid,estimates.newZipCode)">Quote</button>
+                  </div>
+              </div>
+          </div>
+      </div><!---->
+      <!-- Change post code model for UK -->
+      <!---->
+  
+      <div id="stopOrderTransporter" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <h4 class="modal-title">Order Delivery Information</h4>
+                  </div>
+                  <div class="modal-body">
+                      Pickup Delivery is already in process with a transporter. Order Delivery option cannot be selected for this lot at this moment. Please cancel transporter in order to proceed with order delivery.
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-white" data-dismiss="modal" ng-click="estimates.reloadParentPage()">Cancel</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div id="errorMsgModel" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <h4 class="modal-title">Order Delivery</h4>
+                  </div>
+                  <div class="modal-body clearfix">
+                      <div class="p-0 shipping-type">
+                          <div><p>Please check vehicle type should be Automobile or Motorcycle. Document type should be appropriate for International shipping.</p></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  <!-- UK Delivery Submit Address -->
+  
+      <div id="successDeliveryModel" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                          ×</button>
+                      <h4 class="modal-title">Delivery Successfully Added</h4>
+                  </div>
+                   <span class="lightred bold col-sm-12 ng-hide" ng-show="estimates.showErrorMessage">
+                      
+                  </span>
+                  <div class="modal-body">
+                      You have successfully ordered delivery. We will be in touch shortly with further details.
+                      <br><br>
+                      <!---->
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-lblue" type="button" ng-click="estimates.reloadParentPage()">OK</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  
+  <!--  -->
+  
+  </div>
+          </div>
+  
+          <div class="d-flex flex-dir-col lot-detail-section">
+            <div class="p-0 lot-information d-flex ">
+      
+      
+  
+          
+          
+          
+          
+          
+          
+          
+          
+       
+      
+    <div class="p-0 panel f-g2 d-flex-column full-width overflowHidden">
+      <div class="nav nav-tabs lot-details-information border-bottom-none">
+        <div class="full-width">
+          <div class="panel-heading">
+            <h3>
+              Vehicle Details
+              <hr class="s-h-separator">
+            </h3>
+            <span class="dropdown share-button-c">
+              <a class="share-button btn-white dropdown-toggle" type="button" title="Export Lot" data-uname="lotdetailSharetooltip" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true">
+                <i class="lotdetails-icons-redesign share-icon-sl"></i>
+                <span>&nbsp;Share</span>
+              </a>
+              <ul class="dropdown-menu table_div noprint">
+                <div class="dropdown-heading px-10">
+                  <h3 class="d-inline-block fs16 mt-5">
+                    Export Lot
+                  </h3>
+                  <a src="../images/lot-details/lot-details-sprite.svg" class="img-responsive close-tooltip">x</a>
+                </div>
+  
+                <li class="divider"></li>
+  
+                <div class="share-content">
+                  <!----><div pref-code="lotDetailsPreference.allowCSVExport" access-value="true" id="exportLotDetails" ng-if="dynamiclotDetails.isBuyerEligibleToExport">
+                    <div ng-show="(dynamiclotDetails !== undefined)" ng-click="triggerLdpShareLot('export_in_csv')">
+                      <lot-export-in-csv pref-code="lotDetailsPreference.allowCSVExport" access-value="true" csv-url="/data/export/downloadLotDetails?lotNumber=64226573" class="full-width d-flex" export-file-name="lotDetails.csv"><a check-for-logged-in-user="" class=" full-width" data-uname="lotsearchExport" id="exportButton"><img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive export">Export in CSV</a></lot-export-in-csv>
+                    </div>
+                  </div><!---->
+                  <a href="#" class="emailpage clearfix" data-doctitle="2022 BMW X3 XDRIVE30I" ng-click="triggerLdpShareLot('email')"><img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive email-page"><span class="ng-binding">Email</span></a>
+                  <a href="#" class="ng-binding clearfix float-left full-width" ng-click="triggerLdpShareLot('print')"><img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive print-page">Print</a>
+                </div>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="tab-content f-g1 d-f">
+        <div class="panel-content d-flex f-g1 d-flex-column full-width">
+          <div class="f-g2">
+            <!----><div class="d-flex" ng-if="lotDetails.lotId">
+              <!--Lot Number-->
+              <label for="LotNumber" data-uname="lotdetailLotNumber" class="bold">
+                Lot Number:
+              </label>
+              <span id="LotNumber" class="lot-details-desc d-f bold" data-uname="lotdetailVinvalue">
+                64226573
+  
+                <span class="ml-5">
+                  <!----><a target="_blank" ng-if="!lotDetails.hcvu" ng-click="getClearVinURL();" title="Click for ClearVin Report" data-uname="lotdetailInstavinlink" check-for-logged-in-user="">
+                    <!----><img ng-if="lotDetails.fv" src="../images/lot-details/lot-details-sprite.svg" alt="ClearVin Report" class="img-responsive clear-vin-history"><!---->
+                  </a><!---->
+                  <!----><a target="_blank" ng-if="!lotDetails.hevu" ng-click="getEpicVinURL();" title="Click for EpicVin Report" data-uname="lotdetailInstavinlink" check-for-logged-in-user="">
+                    <!----><img ng-if="lotDetails.fv" src="../images/lot-details/lot-details-sprite.svg" class="img-responsive vin-history" alt="Vin History Report"><!---->
+                  </a><!---->
+                </span>
+              </span>
+            </div><!---->
+  
+            <!----><div ng-if="lotDetails.fv">
+              <!----><div ng-if="!ukVinNumber">
+                <!--VIN Number-->
+                <div class="pt-8 d-flex border-top-gray">
+                  <label for="VIN:" data-uname="lotdetailVin" class="bold">
+                    VIN:
+                  </label>
+                  <span id="vinDiv" class="lot-details-desc d-f align-center" data-uname="lotdetailVinvalue">
+                    <span class="bold one-click-select">
+                      5UX53DP07N9******
+                    </span>
+                  </span>
+                </div>
+              </div><!---->
+            </div><!---->
+  
+            <div></div>
+  
+            <!----><div class="pt-8 d-flex border-top-gray" ng-if="lotDetails.ts || lotDetails.td" ng-class="ukVinNumber ? '':'border-top-gray'">
+              <!--Doc Type-->
+              <label for="SaleTitleDescription" data-uname="lotdetailTitledescription" class="bold">
+                Title Code:
+              </label>
+              <span class="lot-details-desc w100" data-uname="lotdetailTitledescriptionvalue">
+                <!----><span class="bold d-flex j-c_s-b" ng-if="lotDetails.ts | trim">
+                  <span>
+                    CO - CERTIFICATE OF TITLE
+                    <!----><a ng-if="titlePendingTooltipMsg" data-uname="titlePendingToolTip" href="javascript:void(0)" data-placement="auto right" data-toggle="popover" data-content="(P) = Title is Pending from Seller and will be provided with in 30 days" tooltip="" data-original-title="" title="">
+                      (P)
+                    </a><!---->
+                  </span>
+                  <a data-uname="lotdetailDoctypetooltip" class="right" href="javascript:void(0)" data-placement=" auto right" data-toggle="popover" data-content="CERTIFICATE OF TITLE without brands. This title is        commonly referred to as a Clean or Clear Title. / Title Group: Clean" aria-label="Lot Detail Doc Type Tooltip" tooltip="" data-original-title="" title="">
+                    <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+                  </a>
+                </span><!---->
+              </span>
+            </div><!---->
+  
+            
+            <!----><div ng-if="lotDetails.orr !== undefined">
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Odometer-->
+                <label for="Odometer:" data-uname="lotdetailOdometer" class="bold">
+                  Odometer:
+                </label>
+                <span class="lot-details-desc odometer-value w100" data-uname="lotdetailOdometervalue">
+                  <!----><span ng-if="(lotDetails.ord | trim)!=''" class="bold d-flex j-c_s-b">
+                    <span>
+                      36,154 mi&nbsp;(ACTUAL)
+                    </span>
+                    <a data-uname="lotdetailOdometertooltip" data-toggle="popover" popoverid="odometer-content" class="popover-span right" aria-label="Lot Detail Odometer Tooltip" tooltip="" data-original-title="" title="">
+                      <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+                    </a>
+                  </span><!---->
+                  <!---->
+                </span>
+              </div>
+            </div><!---->
+  
+            <!----><div ng-if="(lotDetails.hk | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Keys-->
+                <label for="Keys:" data-uname="lotdetailKey" class="bold">
+                  Keys:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailKeyvalue">
+                  YES
+                </span>
+              </div>
+            </div><!---->
+  
+            <div>
+              <!----><div ng-if="lotDetails.tmtp || lotDetails.htsmn=='Y'" class="d-flex pt-5 border-top-gray">
+                  <label data-uname="">
+                      Transmission:
+                  </label>
+                  <span class="lot-details-desc" data-uname="">
+                      AUTOMATIC
+                  </span>
+              </div><!---->
+              <!---->
+          </div>
+  
+            <div></div>
+  
+            <div>
+              <!-- Present only for GStack region sites -->
+            </div>
+  
+            <!---->
+  
+            <!--Estimated Retail Value-->
+            <!----><div ng-if="estimatedRetailValue">
+  
+              <!--Pre-Accident Value -> if the lot-title is either CLEAN or SALVAGE or NON-REPAIRABLE with any damage.
+              Clean Wholesale Value -> if the lot-title is CLEAN and has minor dent/scratches or normal wear -->
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Estimated Retail Value-->
+                <label data-uname="lotdetailEstimatedretailval" class="bold">
+                  Clean Wholesale Value:
+                </label>
+                <!----><span class="lot-details-desc" data-uname="lotdetailEstimatedretailvalue" ng-if="estimatedRetailValue">$43,150.00 USD
+  
+                  <!----><a href="javascript:void(0)" ng-if="enablePlugAcv" class="right" data-placement="right" data-toggle="popover" data-content="Estimated wholesale value for this vehicle in clean condition. No adjustments have been made in relation to vehicles’ actual condition. Copart makes no guarantee, representation, or warranty as to its accuracy nor to the value of the vehicle at the time it is sold." tooltip="" data-original-title="" title="">
+                    <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+                  </a><!---->
+                </span><!---->
+              </div>
+            </div><!---->
+  
+            
+              <!---->
+            
+  
+            
+              <!---->
+            
+            
+  
+            <!----><div ng-if="locale.messages['lotdetail.label.cylinder'] &amp;&amp; (lotDetails.cy | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Cylinders-->
+                <label data-uname="lotdetailCyllinder" class="bold">
+                  Cylinders:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailCylindervalue">
+                  4
+                </span>
+              </div>
+            </div><!---->
+  
+            <!---->
+  
+            <div>
+              <!---->
+            </div>
+  
+            <div>
+              <!-- Present only for GStack region sites -->
+            </div>
+  
+            <div></div>
+  
+            <div></div>
+  
+            <!---->
+  
+            <!----><div ng-if="(lotDetails.drv | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Drive-->
+                <label data-uname="lotdetailDrive" class="bold">
+                  Drive:
+                </label>
+                <span class="lot-details-desc" data-uname="DriverValue">
+                  All wheel drive
+                </span>
+              </div>
+            </div><!---->
+  
+            <!---->
+  
+            <!----><div ng-if="(lotDetails.egn | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <!--Engine Type-->
+                <label data-uname="lotdetailEngine" class="bold">
+                  Engine Type:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailEnginetype">
+                  2.0L  4
+                </span>
+              </div>
+            </div><!---->
+  
+            <!----><div ng-if="vehicleTypeDesc &amp;&amp; lotDetails.vehTypDesc" lot-data-if="AUTOMOBILE">
+              <div class="pt-8 d-flex border-top-gray">
+                <label data-uname="lotdetailvehicletype">
+                  Vehicle Type:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailvehicletype">
+                  AUTOMOBILE
+                </span>
+              </div>
+            </div><!---->
+  
+            <div>
+              <!-- Engine Power Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- CO2 Emission Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- Engine Displacement Present only for GStack region sites -->
+            </div>
+  
+            <!---->
+  
+            <!----><div ng-if="(lotDetails.ft | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <label data-uname="lotdetailFuel" class="bold">
+                  Fuel:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailFuelvalue">
+                  GAS
+                </span>
+              </div>
+            </div><!---->
+  
+            <!----><div ng-if="(lotDetails.clr | trim)!=''">
+              <div class="pt-8 d-flex border-top-gray">
+                <label data-uname="lotdetailColor">
+                  Color:
+                </label>
+                <span class="lot-details-desc" data-uname="lotdetailColorvalue">
+                  BLACK
+                </span>
+              </div>
+            </div><!---->
+  
+            <div>
+              <!-- Present only for UK region sites -->
+            </div>
+  
+            <!---->
+            <!----><div ng-if="lotDetails.mlf">
+              <div class="pt-8 d-flex border-top-gray">
+                <label>
+                  Monroney Label:
+                </label>
+                <span class="lot-details-desc view-condition-report">
+                  <!----><a href="#" class="view-report" check-for-logged-in-user="" ng-if="isAnonymous">View</a><!---->
+                  <!---->
+                </span>
+              </div>
+            </div><!---->
+  
+            <div><!--Interior Type--></div>
+  
+            <div><!--Navigation--></div>
+  
+            <div><!--Navigation Disk--></div>
+  
+            <div><!--Owners Manual--></div>
+  
+            <div>
+              <!-- Document Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- Gross Weight Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- Additional Info Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- Download PDF Present only for GStack region sites -->
+            </div>
+  
+            <div>
+              <!-- Buildsheet Present only for GStack region sites -->
+            </div>
+  
+            
+  
+            <div></div>
+  
+            <!---->
+  
+            <!---->
+            <!---->
+            <!---->
+  
+            <div>
+              <!----><div class="pt-8 d-flex border-top-gray" ng-if="lotDetails.showSeller">
+                <label data-uname="lotdetailSeller">
+                  Seller:</label>
+                <!---->
+                <!----><span ng-if="showSellerCompanyLogo" class="sellericon-img">
+                  <img ng-src="/content/images/seller-icons/sixt.jpg" error-image="" alt="Seller Logo" src="/content/images/seller-icons/sixt.jpg">
+                </span><!---->
+              </div><!---->
+            </div>
+  
+            <div>
+              <!---->
+            </div>
+          </div>
+  
+          <!---->
+          <!---->
+        </div>
+      </div>
+  
+      <div class="table_div" id="odometer-content" style="display: none">
+        <div class="panel">
+          <h3 class="panel-heading">
+            Mileage Types
+          </h3>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ACTUAL</td>
+                  <td>The odometer reading is believed to be the true and actual mileage of the lot.</td>
+                </tr>
+                <tr>
+                  <td>EXEMPT</td>
+                  <td>By Federal Law, no odometer code is required to be displayed for this lot.</td>
+                </tr>
+                <tr>
+                  <td>NOT ACTUAL</td>
+                  <td>The odometer reading does not correctly reflect the mileage of the lot or it cannot be known.</td>
+                </tr>
+                <tr>
+                  <td>
+                    EXCEEDS MECHANICAL LIMITS
+                  </td>
+                  <td>
+                    The true mileage of the lot cannot be expressed because it has exceeded the capacity of the odometer to measure it.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+      
+  
+  </div>
+  
+            <div class="announcements-section p-0" pref-code="lotDetailsPreference.widgets" access-value="showAnnouncements">
+              <!----><sale-light-announcements-component [announcement]="lotDetails.slan" [slcode]="lotDetails.slgc" [show-hail-damage]="showHailDamage" (show-free-condition-report)="getConditionReportForAnnouncement($event)" (show-auto-check-report)="openAutoCheckGuideForLoggedInUsers(true)" (show-arbitration-policy-link)="openArbitrationPolicyLink($event)" ng-if="appInit.lazyLoadedModules.lotDetailsApp
+                        &amp;&amp; showAnnouncementSection" ng-version="14.2.11"><div id="sale-light-tour-step3" class="panel"><div class="panel-heading"><h3 data-uname="lotdetailAnnouncements"> Announcements <hr class="s-h-separator"></h3><!----></div><div class="panel-content announcements-block pt-5"><div class="announcements-top-text mb-10"> Coming Up </div></div><!----><!----></div></sale-light-announcements-component><!---->
+            </div>
+            <!----><div class="products-services desktop-only" ng-if="((userConfig.siteCode=='CPRTMEA' || !lotDetails.ils) || showInspectorLink) &amp;&amp; !isMobileSizeOrDevice" pref-code="lotDetailsPreference.widgets" access-value="showOrderProductAndServices">
+              
+      <div>
+         <!---->
+         <!----><div ng-if="!lotDetails.isYardNotEligibleForCR">
+    <!----><div class="other-products" ng-if="(userConfig.siteCode=='CPRTMEA' || !lotDetails.ils || lotDetails.viewVehicleCRLink) || showInspectorLink">
+      <!----><div class="panel" ng-if="(showInstaVin=='Y' || lotDetails.viewVehicleCRLink) || showInspectorLink">
+        <div class="panel-heading">
+          <h3 data-uname="lotdetailOtherproductandserviceslabel">
+            Reports and Services
+            <hr class="s-h-separator">
+          </h3>
+        </div>
+  
+        <div class="panel-content order-serve-block">
+          <!---->
+  
+          <!----><div ng-if="lotDetails.blucar || showCopartSelectCode" class="border-bottom-gr cond-report-row" title="Condition Report">
+            <img src="/images/icons/lot-details-icons-new.svg" class="img-responsive condition-report-sl" alt="Condition Reports">
+            <a ng-click="getBluTleConditionReport()" check-for-logged-in-user="" class="view-report pl-5 sl-service-item" target="_blank">
+              Condition Report
+              <i class="lotdetails-icons-redesign right-arrow-icon"></i>
+            </a>
+          </div><!---->
+  
+          <!----><div class="border-bottom-gr" ng-if="!lotDetails.hcvu" ng-class="(showInstaVin=='Y' &amp;&amp; lotDetails.fv) ? '':'not-available-items'" title="ClearVin Report">
+            <img src="../images/lot-details/lot-details-sprite.svg" alt="ClearVin Report" class="img-responsive clear-vin-history p-mr-2">
+            <a class="tipHighlight pl-5 sl-service-item" ng-click="getClearVinURL();" target="_blank" check-for-logged-in-user="" data-uname="lotdetailInstavinlink">
+              ClearVin Report
+              <i class="lotdetails-icons-redesign right-arrow-icon"></i>
+            </a>
+          </div><!---->
+  
+          <!----><div class="border-bottom-gr" ng-if="!lotDetails.hevu" ng-class="(showInstaVin=='Y' &amp;&amp; lotDetails.fv) ? '':'not-available-items'" title="EpicVin Report">
+            <img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive vin-history" alt="Vin History Report">
+            <a class="tipHighlight pl-5 sl-service-item" ng-click="getEpicVinURL();" target="_blank" check-for-logged-in-user="" data-uname="lotdetailInstavinlink">
+              EpicVin Report
+              <i class="lotdetails-icons-redesign right-arrow-icon"></i>
+            </a>
+          </div><!---->
+  
+          <div class="clearfix" id="sale-light-tour-step6" ng-class="showInspectorLink ? '':'not-available-items'" title="Inspection Services">
+            <img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive inspection-services" alt="Inspection">
+            <a class="pl-5 sl-service-item" ng-click="getInspectorURL($event)" data-uname="lotdetailSaleinformationinspectorservices">
+              Inspection Services
+              <i class="lotdetails-icons-redesign right-arrow-icon"></i>
+            </a>
+          </div>
+  
+          <!---->
+        </div>
+      </div><!---->
+    </div><!---->
+  </div><!---->
+      </div>
+  
+            </div><!---->
+            <div class="desktop-only p-0 f-g1" pref-code="lotDetailsPreference.widgets" access-value="showSimilarVehicleAlert">
+      <!----><div class="similar-vehicle-alerts" ng-controller="VehicleAlertsController" ng-if="showAlertWidget">
+          <div class="panel">
+              <div class="panel-heading p-pb-0">
+                  <h3 class="similar-alert-title d-inline-block" data-uname="lotdetailVehicleAlerts">
+                      <i class="lotdetails-icons-redesign sv-alerts"></i> Get Alerts on Similar Vehicles
+                  </h3>
+              </div>
+  
+              <div class="panel-content clearfix alert-block pt-5">
+                  <form class="form-inline ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" name="vehicleAlertsForm" ng-submit="lotAlerts(vehicleAlertsForm.$valid)" novalidate="">
+                      <div class="form-group alertWidget mt-10 row-2 f-w_w">
+                          <div class="flex-1 form_fields" ng-class="(formSubmitted || vehicleAlertsForm.firstName.$dirty) &amp;&amp; (vehicleAlertsForm.firstName.$error.required || vehicleAlertsForm.firstName.$error.pattern) ? 'validation-error-box' : ''">
+                              <input class="input-md form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" data-uname="vehiclealertFirstnametextbox" id="firstNameVehicleAlert" maxlength="10" name="firstName" ng-model="vehicleAlertVO.firstName" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="First Name" required="" type="text">
+                              <div class="error ng-hide" ng-show="(formSubmitted || vehicleAlertsForm.firstName.$dirty) &amp;&amp; vehicleAlertsForm.firstName.$error.required" style="white-space: nowrap">First Name
+                                  Required
+                              </div>
+  
+                              <div class="error ng-hide" ng-show="(formSubmitted || vehicleAlertsForm.firstName.$dirty) &amp;&amp; vehicleAlertsForm.firstName.$error.pattern" style="white-space: nowrap">First Name
+                                  can only contain letters
+                              </div>
+                          </div>
+                          <div class="flex-1 ml-5 form_fields" ng-class="(formSubmitted || vehicleAlertsForm.lastName.$dirty) &amp;&amp; (vehicleAlertsForm.lastName.$error.required || vehicleAlertsForm.lastName.$error.pattern) ? 'validation-error-box' : ''">
+                              <input class="input-md form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" data-uname="vehiclealertLastnametextbox" id="lastName" maxlength="10" name="lastName" ng-model="vehicleAlertVO.lastName" ng-pattern="/^[a-zA-Z\s]*$/" placeholder="Last Name" required="" type="text" value="">
+                              <div class="error ng-hide" ng-show="(formSubmitted || vehicleAlertsForm.lastName.$dirty) &amp;&amp; vehicleAlertsForm.lastName.$error.required" style="white-space: nowrap">Last Name
+                                  Required
+                              </div>
+  
+                              <div class="error ng-hide" ng-show="(formSubmitted || vehicleAlertsForm.lastName.$dirty) &amp;&amp; vehicleAlertsForm.lastName.$error.pattern" style="white-space: nowrap">Last Name
+                                  can only contain letters
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group alertWidget row-1 f-w_w">
+                          <div class="flex-1 form_fields">
+                              <select class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" data-uname="vehiclealertFrequencydropdown" aria-label="Alert Frequency" id="frequency" ng-init="vehicleAlertVO.frequency='Weekly'" ng-model="vehicleAlertVO.frequency">
+                                  <option value="">Select Frequency</option>
+                                  <option selected="selected" value="Weekly">Weekly</option>
+                                  <option value="Daily">Daily</option>
+                              </select>
+                          </div>
+                          <div class="flex-1 ml-5 form_fields" ng-class="(formSubmitted || vehicleAlertsForm.alertType.$dirty) &amp;&amp; (vehicleAlertsForm.alertType.$error.required) ? 'validation-error-box' : ''">
+                              <select class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-uname="vhclalertTypedropdown" aria-label="Alert Type" id="alertType" name="alertType" ng-model="vehicleAlertVO.alertType" required="">
+                                  <option value="">Select Alert Type</option>
+                                  <option value="Email">Email</option>
+                                  <!----><option ng-if="showTextAlerts" value="sms">Text Message</option><!---->
+                              </select>
+  
+                              <div class="error ng-hide" ng-show="(formSubmitted || vehicleAlertsForm.alertType.$dirty) &amp;&amp; vehicleAlertsForm.alertType.$error.required" style="white-space: nowrap">Alert type required
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!---->
+                      <!---->
+  
+                      <!---->
+                      <span class="w100 d-block mt-5">
+                          <button class="btn white-blue-btn w100" data-uname="lotdetailSetAlertButton" type="submit" role="button" aria-label="Set Alert">
+                              Set Alert
+                          </button>
+                      </span>
+  
+                      <div class="modal" id="lotAlertSuccess">
+                          <div class="modal-dialog">
+                              <div class="modal-content overflowHidden">
+                                  <div class="modal-header">
+                                      <h4 class="modal-title">fillDetails</h4>
+                                  </div>
+  
+                                  <div class="modal-body wordWrap"></div>
+  
+                                  <div class="modal-footer">
+                                      <button class="btn btn-copart-blue" data-dismiss="modal" type="button">
+                                          Close
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+  
+              <div class="panel-link-bottom w100" pref-code="lotDetailsPreference.showIntShip" access-value="true">
+                  <a class="bl-link" data-uname="lotdetailLearnMoreAboutAlertsLink" href="./vehicleAlerts?intcmp=web_footer_vehiclealerts_en">
+                      Learn More About Alerts
+                      <i class="fa fa-angle-right iconspacing bold" aria-hidden="true"></i>
+                  </a>
+              </div>
+          </div>
+      </div><!---->
+  
+      <!---->
+  </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-12 col-xs-12 p-0 desktop-only show-help" pref-code="lotDetailsPreference.widgets" access-value="showHelp"></div>
+  
+        <div class="print-lot-banner desktop-only">
+          <div parent-id="Content/US/EN/Lot/Details.html" revive-fragmented-content="" fragment-id="mBox-02" reviveappendurl="&amp;lotid=64226573&amp;yardlocation=FL - MIAMI CENTRAL&amp;categoryid=undefined&amp;name=2022 BMW X3 XDRIVE30I&amp;odometer=36154&amp;make=BMW&amp;model=X3 XDRIVE3&amp;year=2022&amp;color=BLACK&amp;drive=All wheel drive&amp;keys=YES&amp;bodystyle=undefined&amp;fuel=GAS&amp;saletype=s1&amp;&amp;buyitnow= true&amp;salestatus=You Haven't Bid&amp;acv=0&amp;repaircost= 0&amp;saledate=Sep 13, 2023&amp;website=www.copart.com&amp;_wco_replace=Default Content"><!----><div ng-bind-html="fragmentedCms"><!--[CDATA[  ]]-->
+  </div></div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-4 col-xs-12 bid-information pr-0 pl-0" id="bid-information-id">
+        <div class="panel clr" id="sale-light-tour-step5">
+      <!----><div ng-if="!loadingBidDetails &amp;&amp; showBidInfo">
+          <div class="panel-heading page-titles">
+              <h3>Bid Information
+                  <hr class="s-h-separator">
+              </h3>
+  
+              <a ng-href="/glossary" class="p-0 glossary bl-link" href="/glossary">
+                  Glossary
+                  <i class="fa fa-angle-right"></i>
+              </a>
+          </div>
+          <div id="granify-bidder-info"></div>
+  
+          <!----><div class="bid-info-content" ng-if="!isUpcomingLot">
+              <div class="row lot-details-content">
+                  <div class="col-md-12 col-xs-12">
+                      <!---->
+  
+                      <!----><div class="lot-details-inner" ng-if="dynamiclotDetails !== undefined">
+                          <!---->
+  
+                          <!----><div ng-if="dynamiclotDetails.lotAuctionStatus != 'COUNTER_BIDDING' &amp;&amp; !dynamiclotDetails.sealedBid">
+                              <!--  Prelimbidding and live bid comes here -->
+                              <!---->
+                              <!----><div ng-if="dynamiclotDetails.lotAuctionStatus != 'LIVE_BIDDING'">
+                                  <div>
+      <div>
+          
+          
+          
+          <div><div tool-tip-pop-over="">
+    <form name="prelimBidForm" class="panel-content prelim_bid_form ng-pristine ng-valid ng-valid-maxlength">
+      <!-- Bid Status -->
+      <div class="d-flex" ng-switch="" on="dynamiclotDetails.bidStatus">
+        <label for="Bid Status">
+          Bid Status:
+        </label>
+        <span>
+          <!-- OutBid -->
+          <!---->
+          <!-- Winning -->
+          <!---->
+          <!-- Other than winning or outbid,dynamically populate the status -->
+          <!----><span ng-switch-default="" class="lot-details-desc ng-hide" ng-show="!isAnonymous">
+            You Haven't Bid
+          </span><!---->
+        </span>
+      </div>
+  
+      <!--Check Bid Eligibility-->
+      <div class="bid-eligibility border-top-gray">
+        
+    <div class="pt-5 d-flex">
+      <label>Eligibility Status:</label>
+      <span>
+        <!--for guest user-->
+        <span class="check-now lot-details-desc" ng-click="checkBidEligibility();" ng-show="!eligibilityChecked &amp;&amp; !(buyerStatus == 'I' || buyerStatus == 'P')">
+          <img src="../images/lot-details/lot-details-sprite.svg" alt="Check Now" class="img-responsive yellow-circle mr-5">
+          <a class="bl-link" check-for-logged-in-user="">
+            Check Now
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </span>
+        <!--for eligible user-->
+        <span class="eligible ng-hide" ng-show="eligibleToBid">
+          <span class="font-green">
+            <img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive green-circle">
+            Eligible to Bid.
+          </span>
+        </span>
+        <!--for non-eligible user-->
+        <span class="not-eligible ng-hide" ng-show="notEligibleBid || (buyerStatus == 'I' || buyerStatus == 'P')">
+          <span class="font-red">
+            <img src="../images/lot-details/lot-details-sprite.svg" class="img-responsive red-circle">
+            Not Eligible to Bid.
+          </span>
+          <a ng-click="checkWhyNotEligible()" class="bold">
+            Check Why?
+          </a>
+        </span>
+      </span>
+    </div>
+  
+      </div>
+  
+      <!-- Sale Status -->
+      <div class="border-top-gray pt-5 d-flex">
+        <label for="Sale Status">
+          Sale Status:
+        </label>
+        <span class="lot-details-desc">
+          Minimum Bid
+          <a class="icon-tooltip" fragment-id="MINIMUM_BID" data-placement="auto right" data-html="true" data-trigger="focus" data-toggle="popover" data-uname="lotDetailSaleStatusTooltip">
+            <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+          </a>
+        </span>
+      </div>
+  
+      <!----><div class="border-top-gray pt-5 d-flex" ng-if="displayTimeLeftForSale !== undefined">
+        <label for="time-left" data-uname="lotdetailSaleinformationtimeleftlabel">
+          Time Left:
+        </label>
+  
+        <span class="d-flex w100">
+          <span class="font-red mr-10 bid-time-left" data-uname="lotdetailSaleinformationtimeleftvalue">
+            0D 4H 20min
+          </span>
+          <!----><a ng-if="showAddToCalendar !== undefined" ng-href="/public/data/lot/addToOutlook/2023-09-13T21:30/2023-09-13T22:00/2022 BMW X3 XDRIVE30I/www.copart.com/" target="_blank" class="add-to-calendar" name="addToCalendar" id="addToCalendar-lotinfo" title="Add to Calendar" ng-click="triggerLdpAddToCalendar()" href="/public/data/lot/addToOutlook/2023-09-13T21:30/2023-09-13T22:00/2022 BMW X3 XDRIVE30I/www.copart.com/">
+            <i class="lotdetails-icons-redesign addcalendar-icon"></i>
+            Add to Calendar</a><!---->
+        </span>
+      </div><!---->
+  
+      
+  
+      <!-- If First Bid is Y, then show both starting bid and maximum bid -->
+      <!---->
+  
+      <!----><div ng-if="!dynamiclotDetails.firstBid">
+        <!---->
+  
+        <!-- Current Bid -->
+        <div class="border-top-gray pt-5 d-flex">
+          <!----><label for="Current Bid" ng-if="!dynamiclotDetails.startingBidFlag">Current Bid:</label><!---->
+          <!---->
+          <span>
+            <span class="bid-price">
+              $25.00 USD
+            </span>
+  
+            <!-- sale status is minimum bid -->
+            <!----><span ng-if="dynamiclotDetails.saleStatus == 'MINIMUM_BID'">
+              <!----><p ng-if="!dynamiclotDetails.sellerReserveMet">
+                <span class="text-muted bold reserve-popover-content d-flex">
+                  Seller Reserve Not Yet Met
+                  <a class="seller-reserve-popover" href="javascript:void(0)" data-toggle="popover" data-content="Seller has placed a reserve price on the lot. If the minimum bid is not surpassed during the live auction, Seller has until 6 p.m. (Pacific Time) on the next business day following the day of the auction to accept the bid." ng-attr-title="{{locale.messages['lotdetail.label.sellerReserve.title']}}" tooltip="" data-original-title="" title="Seller Reserve">
+                    <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+                  </a>
+                </span>
+              </p><!---->
+  
+              <!---->
+            </span><!---->
+          </span>
+        </div>
+  
+        <!---->
+  
+        <!----><div ng-if="dynamiclotDetails.bidStatus == 'NEVER_BID'">
+          <div class="border-top-gray bid_action_block">
+            <div class="pt-5 pl-15">
+              <label class="mr-10">Your Bid:</label>
+              <div class="d-flex mt-5">
+                <span>
+                  <input type="radio" name="bid" ng-model="dynamiclotDetails.jumpCurrentBidFlag" id="max_bid" class="radio_bid_btn ng-pristine ng-untouched ng-valid ng-not-empty" value="N" ng-click="clearMaxBidErrorMsg()">
+                  <label for="max_bid" class="bid_label">Max Bid</label>
+                </span>
+                <span class="ml-20">
+                  <span>
+                    <input type="radio" name="bid" ng-model="dynamiclotDetails.jumpCurrentBidFlag" id="monster_bid" class="radio_bid_btn ng-pristine ng-untouched ng-valid ng-not-empty" value="Y" ng-click="clearMaxBidErrorMsg()">
+                    <label for="monster_bid" class="bid_label">Monster Bid
+                      <a href="javascript:void(0)" data-html="true" data-toggle="popover" data-content="A Monster Bid moves the current bid ahead to a specific amount rather than waiting on the incremental bidding to reach that number. This is a great feature for when you have a specific price in mind for a vehicle." ng-attr-title="Monster Bid" aria-label="Monster Bid" tooltip="" data-original-title="" title="">
+                        <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+                      </a>
+                    </label>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="mb-10">
+              <div class="d-f mt-10 a-i_c mb-0 pl-15 w100" ng-class="(maxBidErrorMsg !== undefined) &amp;&amp; (maxBidErrorMsg != null) &amp;&amp; (maxBidErrorMsg != '')? 'validation-error-box' : ''">
+                <span class="mr-5 fs14">$</span>
+                <input class="input-md form-control bid_amount_input max-monster-bid-field ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="your-max-bid" name="maxBid" type="text" aria-label="Your Max Bid" numbers-only="" ng-model="dynamiclotDetails.bidAmount" maxlength="7" autocomplete="off">
+              </div>
+              <div class="counter-error lightred bold errorstyle ml-30 ng-hide" ng-show="maxBidErrorMsg">
+                
+              </div>
+            </div>
+            <div class="d-f ml-30">
+              <span class="dynamic-bid-inc clr text-muted fs11">
+                ($5.00 USD&nbsp;Bid Increment)
+              </span>
+              <a ng-click="bidIncrementGuidelinesModal()" class="ml-5 fs11 bl-link">
+                Incremental Bid Guidelines
+              </a>
+            </div>
+            <!---->
+            <!----><div class="d-f j-c_c pt-5 bidnow-button" ng-if="buyerStatus !=='I'">
+              <button name="id " class="btn btn-yellow-rd" check-for-logged-in-user="" ng-click="openIncreaseBidModal()" role="button" aria-label="Bid Now">
+                Bid Now
+                <i class="lotdetails-icons-redesign arrow-right-rd-icon right"></i>
+              </button>
+            </div><!---->
+            <div class="price-estimator-block mx-10">
+              <!----><pricing-calculator-component [lot-details]="lotDetails" [currency-code]="lotDetails.cuc" [country-code]="lotDetails.locCountry" [title-group-code]="lotDetails.tgc" (bid-amount-change)="populateMaxBid($event)" [bid-amount]="dynamiclotDetails.bidAmount" ng-if="appInit.lazyLoadedModules.lotDetailsApp" _nghost-ixu-c120="" ng-version="14.2.11"><!----><p-dialog _ngcontent-ixu-c120="" styleclass="cprt-dialog price-estimator-dialog" appendto="body" class="p-element ng-tns-c56-0"><!----></p-dialog><!----></pricing-calculator-component><!---->
+            </div>
+          </div>
+  
+          
+  
+          <!---->
+  
+          <div class="bid_disclaimer_block clr">
+      <!----><p class="full-width bid_disclaimer" ng-if="locale.messages['app.label.asIsWhereIsDisclaimer']">
+          <span class="gray-text">All bids are legally binding and all sales are final.</span>
+          <a class="bl-link" ng-click="openAsIsModal()">
+              Learn More
+          </a>
+      </p><!---->
+  
+      <!---->
+  </div>
+        </div><!---->
+      </div><!---->
+    </form>
+  </div></div>
+      </div>
+  </div>
+                              </div><!---->
+                          </div><!---->
+  
+                          <!---->
+                      </div><!---->
+                  </div>
+              </div>
+          </div><!---->
+  
+          <!---->
+      </div><!---->
+  
+      <!---->
+  
+      <!---->
+  
+      <!---->
+  
+      <!---->
+  
+      <!---->
+  
+  
+      <!---->
+  
+      <!---->
+  
+  </div>
+  
+        <!---->
+  
+        <!----><!---->
+  
+        
+        <div>
+    <!----><div class="panel clr want-it-now" ng-show="!showBuyItNow &amp;&amp; !showMakeAnOfferInline" ng-if="(!lotDetails.gou || (lotDetails.gou &amp;&amp; !isMakeAnOfferAmount)) &amp;&amp; (dynamiclotDetails.buyTodayFlag == 'Y' || dynamiclotDetails.buyTodayFlag == 'B')">
+      <!-- Want it today(Chakri) -->
+      <div class="clearfix panel-content buyitnow-box">
+        <div class="buyitnow-bg"></div>
+        <div class="clearfix">
+          <div class="buyitnow-text">
+            Do you want to buy this vehicle now for
+            <span class="bid-price bold d-inline-block">$34,000.00 USD</span>
+            without an auction?
+            <span class="lot-details-desc buynow-popover">
+              <a href="javascript:void(0)" data-html="true" class="" data-toggle="popover" data-content="<b>Buy It Now</b> allows you to purchase the vehicle immediately at a set price before the lot goes to live auction. Upon clicking the button you will be taken to a confirmation page to confirm your Buy It Now bid. Once confirmed you will be directed to pay for the vehicle. Buy It Now vehicles are required to be removed from the location of storage within 2 business days of purchase, including the day of sale, to avoid storage fees.<br/><br/><b>Make an Offer</b> allows you to make an offer on a vehicle before the lot goes to live auction. The seller will review and either approve counter or refuse your offer amount at their discretion." ng-attr-title="{{locale.messages['lotdetail.label.saleStatus.tooltip.wantToday']}}" tooltip="" data-original-title="" title="About Want It Today?">
+                <i class="lotdetails-icons-redesign exclaimer-rd-icon"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+  
+        <!----><div class="clearfix mt-5" ng-if="buyerStatus != 'I'">
+          <div class="buyitnow-buttons">
+            <!----><button ng-if="dynamiclotDetails.buyTodayFlag == 'Y'" id="makeAnOfferBtn" check-for-logged-in-user="" class="btn blue-white-btn" ng-click="openMakeAnOfferInline()" ng-class="disableBuyItNow()">
+              Make an Offer
+            </button><!---->
+            <button id="buyItNowBtn" check-for-logged-in-user="" class="btn btn-copart-blue btn-buy-it-now" ng-click="toggleBuyItToday()" ng-class="disableBuyItNow()">
+              Buy It Now
+            </button>
+          </div>
+          <span class="counter-error lightred bold errorstyle">
+            
+          </span>
+        </div><!---->
+  
+        <!---->
+        <!-- end of want it today(chakri) -->
+      </div>
+    </div><!---->
+  
+    <!-- Make offer Start -->
+    <!---->
+    <!-- Make offer End -->
+  </div>
+  
+        <div pref-code="hideGoogleAds" access-value="true">
+          <div parent-id="Content/US/EN/Lot/Details.html" compile-cms-content="" data-cms-content-fragment="" fragment-id="Google-AdsMobile"><!----><!----><!----><div ng-if="compileFragment" compile-trusted-html="fragmentedCms" class="lazy_load_container"><script>
+          var loadGoogleAdSlotsMobile = function () {
+              var userstat = 'logged-out';
+              var lang = 'eng';
+              var breakpoint = 'desktop';
+              var test = 'LotDetails';
+              var REFRESH_KEY = 'refresh';
+              var REFRESH_VALUE = 'true';
+              var refresh_rate = 60;
+  
+              googletag.cmd.push(function() {
+                  var midMapping = googletag.sizeMapping().
+                  addSize([768, 0], []).
+                  addSize([0, 0], [320,50]).
+                  build();
+  
+                  googletag.defineSlot('/35265761/lot_details_mobile1_320x50', [320,50], 'div-gpt-ad-1539189991415-0')
+                      .defineSizeMapping(midMapping)
+                      .setTargeting("pos", "mid")
+                      .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+                      .addService(googletag.pubads());
+  
+                  googletag.pubads().addEventListener('impressionViewable', function(event) {
+                      var slot = event.slot;
+                      if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+                          setTimeout(function() {
+                              googletag.pubads().refresh([slot]);
+                          }, refresh_rate * 1000);
+                      }
+                  });
+  
+                  googletag.pubads().setTargeting("userstat",userstat);
+                  googletag.pubads().setTargeting("lang",lang);
+                  googletag.pubads().setTargeting("breakpoint",breakpoint);
+                  googletag.pubads().setTargeting("test",test);
+  
+                  googletag.pubads().collapseEmptyDivs();
+                  googletag.pubads().enableSingleRequest();
+                  googletag.enableServices();
+              });
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1539189991415-0'); });
+          }
+      </script><script type="text/javascript" class="">loadGoogleAdSlotsMobile();</script>
+  <div class="col-sm-12 adx-top" style="text-align: center;">
+  <div class="mb-10" id="div-gpt-ad-1539189991415-0" style="display: none;">&nbsp;</div>
+  </div>
+  
+  </div><!----></div>
+        </div>
+  
+        <!-- start of sale Information -->
+        <div id="sale-information-block" class="panel clr overflowHidden" tool-tip-pop-over="">
+    <div class="panel-heading">
+      <h3 data-uname="lotdetailSaleinformationlabel">
+        Sale Information
+        <hr class="s-h-separator">
+      </h3>
+    </div>
+  
+    <div class="panel-content">
+      <div class="d-flex">
+        <label for="sale yard name">Sale Name:</label>
+        <span class="lot-details-desc">
+          <!----><span ng-if="dynamiclotDetails.lotAuctionStatus != 'COUNTER_BIDDING'">
+            <a ng-click="getAllLaneSaleListResultUrl(lotDetails)">RENTAL VEHICLE SALE</a>
+          </span><!---->
+          <!---->
+        </span>
+      </div>
+  
+      <div class="border-top-gray pt-5 d-flex">
+        <label for="location" data-uname="lotdetailSaleinformationlocationlabel">
+          Sale Location:
+        </label>
+  
+        <span class="lot-details-desc">
+          <a target="_blank" href="/locations/miami-central-fl-105" data-uname="lotdetailSaleinformationlocationvalue">FL - MIAMI CENTRAL
+          </a>
+        </span>
+      </div>
+  
+      <!---->
+  
+      <!--
+             If the sale is in future, we just show future
+             If not, we display the sale date, sale time and add to calendar
+          -->
+      <div class="border-top-gray d-flex pt-5">
+        <label for="sale date:" data-uname="lotdetailSaleinformationsaledatelabel">
+          Sale Date:
+        </label>
+        <div class="lot-details-desc" ng-switch="" on="lotDetails.ifs &amp;&amp; lotDetails.ifs.toString()">
+          <!---->
+          <!----><div ng-switch-default="">
+            <!----><p class="bold" ng-if="validateDate(lotDetails.ad)">
+              <span data-uname="lotdetailSaleinformationsaledatevalue">
+                Wed. Sep 13, 2023<br>
+                09:30 PM IST<br>
+              </span>
+            </p><!---->
+            <!---->
+          </div><!---->
+        </div>
+      </div>
+  
+      <!---->
+  
+      <!---->
+  
+      <div class="border-top-gray pt-5 d-flex" pref-code="lotDetailsPreference.showLastUpdateDate" access-value="true">
+        <label for="last-updated" data-uname="lotdetailSaleinformationlastUpdatedlabel">
+          Last Updated:
+        </label>
+        <span class="lot-details-desc" data-uname="lotdetailSaleinformationlastupdatedvalue">
+          09/13/2023 8:24 am
+        </span>
+      </div>
+  
+      <!---->
+  
+      <!---->
+    </div>
+  </div>
+  
+        <!---->
+  
+        <!---->
+  
+        <div class="print-lot-banner clearfix desktop-only borderNone">
+          <div class="clr" parent-id="Content/US/EN/Lot/Details.html" revive-fragmented-content="" fragment-id="revive-image1" reviveappendurl="&amp;lotid=64226573&amp;yardlocation=FL - MIAMI CENTRAL&amp;categoryid=undefined&amp;name=2022 BMW X3 XDRIVE30I&amp;odometer=36154&amp;make=BMW&amp;model=X3 XDRIVE3&amp;year=2022&amp;color=BLACK&amp;drive=All wheel drive&amp;keys=YES&amp;bodystyle=undefined&amp;fuel=GAS&amp;saletype=s1&amp;&amp;buyitnow= true&amp;salestatus=You Haven't Bid&amp;acv=0&amp;repaircost= 0&amp;saledate=Sep 13, 2023&amp;website=www.copart.com&amp;_wco_replace=Default Content"><!----><div ng-bind-html="fragmentedCms"><style type="text/css">@media (max-width: 768px){
+      .print-lot-banner.clearfix.desktop-only {
+          display: block;
+      }
+      .lot-details-page .lazy_load_container {
+          background-image: unset;
+      }
+  }
+  
+  #copart-r-view-2 img {  
+      display: block;
+      max-width: 100%;
+      height: auto;   
+      width: auto;
+      margin: 0 auto;
+  }
+  </style>
+  <div class="col-sm-12 mb-10 text-center pad0" id="copart-r-view-2" revive-banner-tagging=""><a href="/banner/www/delivery/ck.php?oaparams=2__bannerid=10883__zoneid=570__cb=e0bf261a94__oadest=http%3A%2F%2Fcopart.com%2Fsixt-wholesale%3Fintcmp%3Dbanners__sixt-wholesale_ldt_promotion" target="_blank"><img src="https://www.copart.com/content/miami-lot-promo-420x250.jpg" width="420" height="250" alt="sixt, rental, copart select, wholesale" title="sixt, rental, copart select, wholesale" border="0"></a><div id="beacon_e0bf261a94" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://ad-rn.copart.com/www/delivery/lg.php?bannerid=10883&amp;campaignid=582&amp;zoneid=570&amp;loc=https%3A%2F%2Fwww.copart.com%2Flot%2F64226573%2Fclean-title-2022-bmw-x3-xdrive30i-fl-miami-central&amp;cb=e0bf261a94" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+  </div><script>var OX_5715eaf3 = '';
+  OX_5715eaf3 += "<"+"a href=\'/banner/www/delivery/ck.php?oaparams=2__bannerid=10883__zoneid=570__cb=e0bf261a94__oadest=http%3A%2F%2Fcopart.com%2Fsixt-wholesale%3Fintcmp%3Dbanners__sixt-wholesale_ldt_promotion\' target=\'_blank\'><"+"img src=\'https://www.copart.com/content/miami-lot-promo-420x250.jpg\' width=\'420\' height=\'250\' alt=\'sixt, rental, copart select, wholesale\' title=\'sixt, rental, copart select, wholesale\' border=\'0\' /><"+"/a><"+"div id=\'beacon_e0bf261a94\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'https://ad-rn.copart.com/www/delivery/lg.php?bannerid=10883&amp;campaignid=582&amp;zoneid=570&amp;loc=https%3A%2F%2Fwww.copart.com%2Flot%2F64226573%2Fclean-title-2022-bmw-x3-xdrive30i-fl-miami-central&amp;cb=e0bf261a94\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+  $("#copart-r-view-2").html(OX_5715eaf3);
+  </script><script>var OX_4853761d = '';
+  OX_4853761d += "<"+"a href=\'/banner/www/delivery/ck.php?oaparams=2__bannerid=10694__zoneid=570__cb=eae3004b1c__oadest=https%3A%2F%2Fwww.copart.com%2Fblog%2Fen%2Four-upgraded-images-give-you-better-views-of-vehicles%2F%3Fintcmp%3Dbanners_internal_imaging_project_ldt_imaging_project\' target=\'_self\'><"+"img src=\'https://www.copart.com/content/lotdetails-photosupgrade-420x250.jpg\' width=\'420\' height=\'250\' alt=\'See the whole picture with Copart&#039;s enhanced images learn more\' title=\'See the whole picture with Copart&#039;s enhanced images learn more\' border=\'0\' /><"+"/a><"+"div id=\'beacon_eae3004b1c\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'https://ad-rn.copart.com/www/delivery/lg.php?bannerid=10694&amp;campaignid=582&amp;zoneid=570&amp;loc=https%3A%2F%2Fwww.copart.com%2Flot%2F64226573%2Fclean-title-2022-bmw-x3-xdrive30i-fl-miami-central&amp;cb=eae3004b1c\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+  $("#copart-r-view-2").html(OX_4853761d);
+  </script>
+  <script type="text/javascript">
+     var m3_u = '/banner/www/delivery/ajs.php';
+     var m3_r = Math.floor(Math.random()*99999999999);
+     if (!document.MAX_used) document.MAX_used = ',';
+     var str = m3_u;
+     str += "?zoneid=570&ismember=true&isloggedin=false&membertype=membershipType&sitelang=en&pageurl=/lot/64226573/clean-title-2022-bmw-x3-xdrive30i-fl-miami-central&intcmp=&cid=&eid=&memberlicensecategory=&lotid=64226573&yardlocation=FL - MIAMI CENTRAL&categoryid=undefined&name=2022 BMW X3 XDRIVE30I&odometer=36154&make=BMW&model=X3 XDRIVE3&year=2022&color=BLACK&drive=All wheel drive&keys=YES&bodystyle=undefined&fuel=GAS&saletype=s1&&buyitnow= true&salestatus=You Haven't Bid&acv=0&repaircost= 0&saledate=Sep 13, 2023&website=www.copart.com&_wco_replace=Default Content";
+     str += '&amp;cb=' + m3_r;
+     if (document.MAX_used != ',') str += "&amp;exclude=" + document.MAX_used
+     str += document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : '');
+     str += "&amp;loc=" + escape(window.location);
+     if (document.referrer) str += ("&amp;referer=" + escape(document.referrer));
+     if (document.context) str += ("&context=" + escape(document.context));
+     if (document.mmm_fo) str += ("&amp;mmm_fo=1");
+  
+     $.ajax({
+        url: str,
+        dataType: "text",
+        success: function(d){
+           var script = document.createElement("script");
+          d = d.replace("document.write", '$("#copart-r-view-2").html').replace(/https:\/\/ad.*?\.copart.com/, '/banner');
+          $(script).html(d);
+          $(script).insertAfter( "#copart-r-view-2" );
+        },
+        error: function(jqXHR, exception){
+          var defaultImage = '<a href="/vehicleAlerts/?intcmp=web_banner_ldt_vehiclealerts_en_default_backup">'+
+                                 '<img alt="Vehicle Alert" class="img-responsive w100" src="/content/us/en/banners/vehiclealerts-370x520.jpg" />'+
+                                      '</a>';
+          $("#copart-r-view-2").html(defaultImage);
+        },
+        timeout: 2000
+     });
+  </script>
+  </div></div>
+          <div class="clr" parent-id="Content/US/EN/Lot/Details.html" data-cms-content-fragment="" compile-cms-content="" fragment-id="google_ads_middle_right"><!----><!----><!----><div ng-if="compileFragment" compile-trusted-html="fragmentedCms"><div class="lazy_load_container"><script>
+          var loadGoogleAdSlotsRight = function () {
+              var userstat = 'logged-out';
+              var lang = 'eng';
+              var breakpoint = 'desktop';
+              var test = 'LotDetails';
+              var REFRESH_KEY = 'refresh';
+              var REFRESH_VALUE = 'true';
+              var refresh_rate = 60;
+  
+              googletag.cmd.push(function() {
+                  var midMapping = googletag.sizeMapping().
+                  addSize([768, 0], [300,250]).
+                  addSize([0, 0], []).
+                  build();
+  
+                  googletag.defineSlot('/35265761/lot_details_300x250', [300,250], 'div-gpt-ad-1539189265662-0')
+                      .defineSizeMapping(midMapping)
+                      .setTargeting("pos", "mid")
+                      .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+                      .addService(googletag.pubads());
+  
+                  googletag.pubads().addEventListener('impressionViewable', function(event) {
+                      var slot = event.slot;
+                      if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+                          setTimeout(function() {
+                              googletag.pubads().refresh([slot]);
+                          }, refresh_rate * 1000);
+                      }
+                  });
+  
+                  googletag.pubads().setTargeting("userstat",userstat);
+                  googletag.pubads().setTargeting("lang",lang);
+                  googletag.pubads().setTargeting("breakpoint",breakpoint);
+                  googletag.pubads().setTargeting("test",test);
+  
+                  googletag.pubads().collapseEmptyDivs();
+                  googletag.pubads().enableSingleRequest();
+                  googletag.enableServices();
+              });
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1539189265662-0'); });
+          }
+      </script><script type="text/javascript" class="">loadGoogleAdSlotsRight();</script>
+  <div class="col-sm-12 adx-top" style="text-align: center;">
+  <div id="div-gpt-ad-1539189265662-0" data-google-query-id="COT-po_Op4EDFYsZgwMdBegO1w">&nbsp;<div id="google_ads_iframe_/35265761/lot_details_300x250_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="https://109417e860b7e52ee8274f734a8fddc7.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/35265761/lot_details_300x250_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+  </div>
+  </div>
+  
+  </div><!----></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mt-10 mobile-only">
+      <!---->
+    </div>
+  
+    <div class="">
+      <div class="print-lot-banner mobile-only">
+        <div parent-id="Content/US/EN/Lot/Details.html" revive-fragmented-content="" fragment-id="mBox-02" reviveappendurl="&amp;lotid=64226573&amp;yardlocation=FL - MIAMI CENTRAL&amp;categoryid=undefined&amp;name=2022 BMW X3 XDRIVE30I&amp;odometer=36154&amp;make=BMW&amp;model=X3 XDRIVE3&amp;year=2022&amp;color=BLACK&amp;drive=All wheel drive&amp;keys=YES&amp;bodystyle=undefined&amp;fuel=GAS&amp;saletype=s1&amp;&amp;buyitnow= true&amp;salestatus=You Haven't Bid&amp;acv=0&amp;repaircost= 0&amp;saledate=Sep 13, 2023&amp;website=www.copart.com&amp;_wco_replace=Default Content"><!----><div ng-bind-html="fragmentedCms"><!--[CDATA[  ]]-->
+  </div></div>
+      </div>
+    </div>
+  
+    <div class="print-lot-banner clearfix mobile-only">
+      <div class="clr" parent-id="Content/US/EN/Lot/Details.html" revive-fragmented-content="" fragment-id="revive-image1" reviveappendurl="&amp;lotid=64226573&amp;yardlocation=FL - MIAMI CENTRAL&amp;categoryid=undefined&amp;name=2022 BMW X3 XDRIVE30I&amp;odometer=36154&amp;make=BMW&amp;model=X3 XDRIVE3&amp;year=2022&amp;color=BLACK&amp;drive=All wheel drive&amp;keys=YES&amp;bodystyle=undefined&amp;fuel=GAS&amp;saletype=s1&amp;&amp;buyitnow= true&amp;salestatus=You Haven't Bid&amp;acv=0&amp;repaircost= 0&amp;saledate=Sep 13, 2023&amp;website=www.copart.com&amp;_wco_replace=Default Content"><!----><div ng-bind-html="fragmentedCms"><style type="text/css">@media (max-width: 768px){
+      .print-lot-banner.clearfix.desktop-only {
+          display: block;
+      }
+      .lot-details-page .lazy_load_container {
+          background-image: unset;
+      }
+  }
+  
+  #copart-r-view-2 img {  
+      display: block;
+      max-width: 100%;
+      height: auto;   
+      width: auto;
+      margin: 0 auto;
+  }
+  </style>
+  <div class="col-sm-12 mb-10 text-center pad0" id="copart-r-view-2" revive-banner-tagging="">&nbsp;</div>
+  <script type="text/javascript">
+     var m3_u = '/banner/www/delivery/ajs.php';
+     var m3_r = Math.floor(Math.random()*99999999999);
+     if (!document.MAX_used) document.MAX_used = ',';
+     var str = m3_u;
+     str += "?zoneid=570&ismember=true&isloggedin=false&membertype=membershipType&sitelang=en&pageurl=/lot/64226573/clean-title-2022-bmw-x3-xdrive30i-fl-miami-central&intcmp=&cid=&eid=&memberlicensecategory=&lotid=64226573&yardlocation=FL - MIAMI CENTRAL&categoryid=undefined&name=2022 BMW X3 XDRIVE30I&odometer=36154&make=BMW&model=X3 XDRIVE3&year=2022&color=BLACK&drive=All wheel drive&keys=YES&bodystyle=undefined&fuel=GAS&saletype=s1&&buyitnow= true&salestatus=You Haven't Bid&acv=0&repaircost= 0&saledate=Sep 13, 2023&website=www.copart.com&_wco_replace=Default Content";
+     str += '&amp;cb=' + m3_r;
+     if (document.MAX_used != ',') str += "&amp;exclude=" + document.MAX_used
+     str += document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : '');
+     str += "&amp;loc=" + escape(window.location);
+     if (document.referrer) str += ("&amp;referer=" + escape(document.referrer));
+     if (document.context) str += ("&context=" + escape(document.context));
+     if (document.mmm_fo) str += ("&amp;mmm_fo=1");
+  
+     $.ajax({
+        url: str,
+        dataType: "text",
+        success: function(d){
+           var script = document.createElement("script");
+          d = d.replace("document.write", '$("#copart-r-view-2").html').replace(/https:\/\/ad.*?\.copart.com/, '/banner');
+          $(script).html(d);
+          $(script).insertAfter( "#copart-r-view-2" );
+        },
+        error: function(jqXHR, exception){
+          var defaultImage = '<a href="/vehicleAlerts/?intcmp=web_banner_ldt_vehiclealerts_en_default_backup">'+
+                                 '<img alt="Vehicle Alert" class="img-responsive w100" src="/content/us/en/banners/vehiclealerts-370x520.jpg" />'+
+                                      '</a>';
+          $("#copart-r-view-2").html(defaultImage);
+        },
+        timeout: 2000
+     });
+  </script>
+  </div></div>
+    </div>
+  
+    <script>
+      function showAutocheckPurchaseReport() {
+        $("#autocheckReport").removeClass("fade").modal("hide");
+        $("#autoCheckConfirmPurchaseModal").modal("show").addClass("fade");
+      }
+      $(".auto-purchasereport").on("click", function () {
+        showAutocheckPurchaseReport();
+      });
+    </script>
+  
+    <div id="eligibilityErrorModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content overflowHidden">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              You Are Not Eligible to Bid On this Vehicle.
+            </h4>
+          </div>
+          <div class="modal-body wordWrap">
+            <ul class="mt-10">
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-copart-blue right" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!---->
+          <!---->
+        </div><!---->
+  
+        <!---->
+      </div>
+
+</body>
+</html>

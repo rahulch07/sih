@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./st.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1><a href="Homepage.html">Organization Name</a></h1>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="Location.html">Locate Hub</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Our services.html">Our Services</a></li>
+          </ul>
+        </div>
+        <div class="cta-buttons">
+          <a href="Lgoin.html" class="login-button">Login</a>
+          <a href="#" class="sell-button">Sell</a>
+        </div>
+      </nav>
+    </header>
+
+   
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            
+            <p>Only 12.5% of E-Waste is recycled.</p>
+        </div>
+    </div>
+    <div class="popup" id="popup-2">
+      <div class="popup-content">
+          <span class="close" id="close-popup-2">&times;</span>
+          
+          <p>It takes 530 lbs of fossil fuel, 48 lbs of chemicals, and 1.5 tons of water to manufacture one computer and monitor.</p>
+      </div>
+  </div>
+  <div class="popup" id="popup-3">
+    <div class="popup-content">
+        <span class="close" id="close-popup-3">&times;</span>
+        
+        <p>Only 12.5% of E-Waste is recycled.</p>
+    </div>
+</div>
+    <script src="script.js"></script>
+
+
+
+    <div class="container" style="width: 100%; max-width: 80%">
+      <div class="row">
+        <div class="card col-4" style="width: 18rem; margin: auto; margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Phone</b></p>
+            <p class="card-text">Phones make 12% of E-Waste.</p>
+          </div>
+        </div>
+        <div class="card col-4" style="width: 18rem; margin: auto;  margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Laptop</b></p>
+            <p class="card-text">Phones make 15% of E-Waste.</p>
+          </div>
+        </div>
+        <div class="card col-4" style="width: 18rem; margin: auto;  margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Televisions</b></p>
+            <p class="card-text">Phones make 15% of E-Waste.</p>
+          </div>
+        </div>
+        <div class="card col-4" style="width: 18rem; margin: auto;  margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Air Conditioners</b></p>
+            <p class="card-text">Phones make 15% of E-Waste.</p>
+          </div>
+        </div>
+        <div class="card col-4" style="width: 18rem; margin: auto; margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Power Banks</b></p>
+            <p class="card-text">Phones make 15% of E-Waste.</p>
+          </div>
+        </div>
+        <div class="card col-4" style="width: 18rem; margin: auto;  margin-top: 10px;">
+          <img src="./phone.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p><b>Chargers</b></p>
+            <p class="card-text">Phones make 15% of E-Waste.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 My Website</p>
+      </div>
+    </footer>
+
+    <script>
+    // script.js
+// document.addEventListener("DOMContentLoaded", function () {
+//     setTimeout(function () {
+//         var popup = document.getElementById("popup");
+//         popup.style.display = "block";
+//     }, 10000); // 10 seconds (10000 milliseconds)
+    
+//     var closePopup = document.getElementById("close-popup");
+//     closePopup.addEventListener("click", function () {
+//         var popup = document.getElementById("popup");
+//         popup.style.display = "none";
+//     });
+// 
+
+//});
+
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+    var popup = document.getElementById("popup");
+    var popup2 = document.getElementById("popup-2");
+    var popup3 = document.getElementById("popup-3");
+
+    function showPopup() {
+        popup.style.display = "block";
+    }
+    function showPopup2() {
+        popup2.style.display = "block";
+    }
+    function showPopup3() {
+        popup3.style.display = "block";
+    }
+
+    function hidePopup() {
+        popup.style.display = "none";
+        setTimeout(function () {
+             showPopup2();
+         }, 3000);
+    }
+    function hidePopup2() {
+        popup2.style.display = "none";
+        setTimeout(function () {
+             showPopup3();
+         }, 3000);
+    }
+    function hidePopup3() {
+        popup3.style.display = "none";
+        setTimeout(function () {
+             showPopup1();
+         }, 3000);
+    }
+
+    // Show the popup initially after 10 seconds
+    setTimeout(showPopup, 3000);
+
+    
+
+    var closePopup = document.getElementById("close-popup");
+    closePopup.addEventListener("click", function () {
+        hidePopup();
+    });
+    var closePopup2 = document.getElementById("close-popup-2");
+    closePopup2.addEventListener("click", function () {
+        hidePopup2();
+    });
+    var closePopup3 = document.getElementById("close-popup-3");
+    closePopup3.addEventListener("click", function () {
+        hidePopup3();
+    });
+    // if(popup.style.display=='block'){
+    //   setTimeout(showPopup,10000);
+    // }
+});
+
+</script>
+
+  </body>
+</html>
